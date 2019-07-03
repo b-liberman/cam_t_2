@@ -1,0 +1,41 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id "io.freefair.lombok" version "3.6.4"
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'boris.camunda'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	ext {
+		camundaSpringVersion = '3.3.1'
+		junitVersion = '5.4.2'
+    }
+    
+    compile(
+    	"org.springframework.boot:spring-boot-starter",
+    	"org.springframework.boot:spring-boot-dependencies:2.1.5.RELEASE",
+    	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:$camundaSpringVersion",
+    	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:$camundaSpringVersion",
+    	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-rest:$camundaSpringVersion",
+    	
+    	"com.h2database:h2:1.4.199"    	
+    )
+
+    testImplementation (
+    	"org.springframework.boot:spring-boot-starter-test",
+    	"org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    )
+    
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+
+}

@@ -1,0 +1,10 @@
+camunda.bpm:
+  admin-user:
+    id: q
+    password: w
+    firstName: Kermit
+  filter:
+    create: All tasks
+  job-execution:
+     max-wait: 1000
+     wait-time-in-millis: 500
