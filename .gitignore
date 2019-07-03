@@ -12,3 +12,22 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+.settings/org.springframework.ide.eclipse.prefs
+.classpath
+.project
+.settings/org.eclipse.buildship.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+bin/main/application.yaml
+bin/main/loan.bpmn
+bin/main/META-INF/processes.xml
+bin/main/boris/camunda/CamTest2Application.class
+bin/main/boris/camunda/Checker.class
+bin/main/boris/camunda/Compensator.class
+bin/main/boris/camunda/EscalateTask.class
+bin/main/boris/camunda/Listener.class
+bin/main/boris/camunda/PrintWarningTask.class
+bin/main/boris/camunda/ReceivedEventProc.class
+bin/main/boris/camunda/RunCheckSoft.class
+bin/main/boris/camunda/SendEvent.class
+bin/test/boris/camunda/CamTest2ApplicationTests.class
+src/test/java/boris/camunda/CamTest2ApplicationTests.java
