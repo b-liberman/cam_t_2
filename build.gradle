@@ -1,13 +1,23 @@
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.1.5.RELEASE'
-    id "io.freefair.lombok" version "3.6.4"
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id "io.freefair.lombok" version "3.8.0"
+	id 'com.github.ben-manes.versions' version "0.21.0"
+	id 'pl.allegro.tech.build.axion-release' version '1.10.1'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
 group = 'boris.camunda'
-version = '0.0.1-SNAPSHOT'
+project.version = scmVersion.version
 sourceCompatibility = '12'
 
 repositories {
@@ -18,12 +28,12 @@ dependencies {
 
 	ext {
 		camundaSpringVersion = '3.3.1'
-		junitVersion = '5.4.2'
+		junitVersion = '5.5.0'
     }
     
     compile(
     	"org.springframework.boot:spring-boot-starter",
-    	"org.springframework.boot:spring-boot-dependencies:2.1.5.RELEASE",
+    	"org.springframework.boot:spring-boot-dependencies:+",
     	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:$camundaSpringVersion",
     	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:$camundaSpringVersion",
     	"org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-rest:$camundaSpringVersion",
