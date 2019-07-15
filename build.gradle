@@ -20,6 +20,7 @@ group = 'boris.camunda'
 project.version = scmVersion.version
 sourceCompatibility = '12'
 
+
 repositories {
 	mavenCentral()
 }
